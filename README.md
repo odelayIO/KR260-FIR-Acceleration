@@ -30,7 +30,7 @@ Clone repo and build project:
 ```shell
 git clone https://github.com/odelayIO/PYNQ-Z1-FIR-Acceleration.git
 cd PYNQ-Z1-FIR-Acceleration
-make all
+make
 ```
 
 If everything was successful, the following message will be displayed on the terminal:
@@ -41,45 +41,45 @@ Built fir_accel successfully!
 
 
 
-# Running on PYNQ Z1 Board
+
+
+# Running on the KR260 Board
 
 The following output files will be created in the base directory:
 
 ```shell
-drwxrwxr-x 6 sdr sdr    4096 Nov 14 10:08 .
-drwxrwxr-x 6 sdr sdr    4096 Nov 14 10:01 ..
--rw-rw-r-- 1 sdr sdr    1344 Nov 14 10:01 build_bitstream.tcl
--rw-rw-r-- 1 sdr sdr     496 Nov 14 10:01 check_fir_accel.tcl
-drwxrwxr-x 8 sdr sdr    4096 Nov 14 10:08 fir_accel
--rw-rw-r-- 1 sdr sdr   47767 Nov 14 10:01 fir_accel_bd.tcl
--rw-rw-r-- 1 sdr sdr 4045677 Nov 14 10:08 fir_accel.bit
--rw-rw-r-- 1 sdr sdr  475114 Nov 14 10:08 fir_accel.hdf
--rw-rw-r-- 1 sdr sdr  299889 Nov 14 10:03 fir_accel.hwh
--rw-rw-r-- 1 sdr sdr  438000 Nov 14 10:01 fir_accel.ipynb
--rw-rw-r-- 1 sdr sdr   12076 Nov 14 10:01 fir_accel.xdc
-drwxrwxr-x 8 sdr sdr    4096 Nov 14 10:01 .git
--rw-rw-r-- 1 sdr sdr     951 Nov 14 10:03 makefile
-drwxrwxr-x 2 sdr sdr    4096 Nov 14 10:03 NA
--rw-rw-r-- 1 sdr sdr     661 Nov 14 10:01 README.md
--rw-rw-r-- 1 sdr sdr     653 Nov 14 10:03 vivado_26659.backup.jou
--rw-rw-r-- 1 sdr sdr    2848 Nov 14 10:03 vivado_26659.backup.log
--rw-rw-r-- 1 sdr sdr     659 Nov 14 10:03 vivado_26710.backup.jou
--rw-rw-r-- 1 sdr sdr   75406 Nov 14 10:08 vivado_26710.backup.log
--rw-rw-r-- 1 sdr sdr     658 Nov 14 10:08 vivado.jou
--rw-rw-r-- 1 sdr sdr     754 Nov 14 10:08 vivado.log
-drwxrwxr-x 2 sdr sdr    4096 Nov 14 10:08 .Xil
+total 9792
+drwxrwxr-x 5 sdr sdr    4096 Apr 13 04:20 .
+drwxrwxr-x 6 sdr sdr    4096 Apr 13 04:06 ..
+drwxr-xr-x 2 sdr sdr    4096 Apr 13 04:20 .Xil
+drwxrwxr-x 8 sdr sdr    4096 Apr 13 04:09 .git
+-rw-rw-r-- 1 sdr sdr    3502 Apr 13 04:13 README.md
+-rwxrwxr-- 1 sdr sdr    1261 Apr 13 04:08 build_bitstream.tcl
+-rwxrwxr-- 1 sdr sdr     508 Apr 13 04:08 check_kr260_fir_accel.tcl
+drwxr-xr-x 8 sdr sdr    4096 Apr 13 04:12 kr260_fir_accel
+-rw-r--r-- 1 sdr sdr 7797819 Apr 13 04:20 kr260_fir_accel.bit
+-rw-r--r-- 1 sdr sdr  349505 Apr 13 04:12 kr260_fir_accel.hwh
+-rwxr--r-- 1 sdr sdr  104545 Apr 13 04:08 kr260_fir_accel.ipynb
+-rw-r--r-- 1 sdr sdr 1554715 Apr 13 04:20 kr260_fir_accel.xsa
+-rw-rwxr-- 1 sdr sdr   55553 Apr 13 04:08 kr260_fir_accel_bd.tcl
+-rwxrwxr-- 1 sdr sdr     947 Apr 13 04:08 makefile
+-rw-r--r-- 1 sdr sdr     815 Apr 13 04:20 vivado.jou
+-rw-r--r-- 1 sdr sdr     911 Apr 13 04:20 vivado.log
+-rw-r--r-- 1 sdr sdr     801 Apr 13 04:11 vivado_123.backup.jou
+-rw-r--r-- 1 sdr sdr   84943 Apr 13 04:20 vivado_123.backup.log
+-rw-r--r-- 1 sdr sdr     806 Apr 13 04:10 vivado_83.backup.jou
+-rw-r--r-- 1 sdr sdr    8194 Apr 13 04:11 vivado_83.backup.log
+
 ```
 
-Now upload the following files to the PYNQ Z1 Board:
+Now upload the following files to the KR260 Board:
 
 ```shell
-scp fir_accel.bit fir_accel.hdf fir_accel.hdf fir_accel.hwh fir_accel.ipynb xilinx@PYNQ:/home/xilinx/jupyter_notebooks/fir_accel
+make upload
 ```
 
 Open a web browser and navigate to the Jupyter Notebook, for example:
 
-```shell
-http://PYNQ:9090/notebooks/fir_accel/fir_accel.ipynb
-```
+http://kria:9090/lab/tree/kr260_fir_accel/kr260_fir_accel.ipynb
 
 Follow the instructions in the notebook
