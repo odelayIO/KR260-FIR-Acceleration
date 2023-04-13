@@ -19,7 +19,7 @@ The following modification to the original project:
 
 # Building Overlay
 
-This project uses the Vivado 2022.1 Docker Container from [odelayIO/vivado2022.1_docker](odelayIO/vivado2022.1_docker) repository.  Once the Docker container is created, just execute the run file.  See repository for instructions how to modify the [run.sh](https://github.com/odelayIO/vivado2022.1_docker/blob/master/run.sh) script
+This project uses the Vivado 2022.1 Docker Container from [odelayIO/vivado2022.1_docker](https://github.com/odelayIO/vivado2022.1_docker) repository.  Once the Docker container is created, just execute the run file.  See repository for instructions how to modify the [run.sh](https://github.com/odelayIO/vivado2022.1_docker/blob/master/run.sh) script
 
 ```shell
 ./vivado2022.1_docker/run.sh
