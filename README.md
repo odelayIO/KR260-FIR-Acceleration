@@ -28,8 +28,8 @@ This project uses the Vivado 2022.1 Docker Container from [odelayIO/vivado2022.1
 Clone repo and build project:
 
 ```shell
-git clone https://github.com/odelayIO/PYNQ-Z1-FIR-Acceleration.git
-cd PYNQ-Z1-FIR-Acceleration
+git clone git@github.com:odelayIO/KR260-FIR-Acceleration.git
+cd KR260-FIR-Acceleration
 make
 ```
 
