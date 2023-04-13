@@ -9,7 +9,7 @@ The following modification to the original project:
 - Upgraded the project for **PYNQ Version 3.0** using **Xilinx Vivado 2022.1**
 
 - Updated the Jupyter Notebook to use memory buffers created by `allocate` DMA library.
-  - Read The Docs: https://pynq.readthedocs.io/en/v2.5/pynq_libraries/dma.html
+  - Read The Docs: https://pynq.readthedocs.io/en/v3.0.0/pynq_libraries/dma.html
   
 - Created a `makefile` similar to the base design in the [PYNQ Z1 repository](https://github.com/odelayIO/PYNQ-Z1-FIR-Acceleration/tree/vivado-2022.1)
 
@@ -17,7 +17,7 @@ The following modification to the original project:
 
 
 
-# Building Overlay
+# Building Overlay 
 
 This project uses the Vivado 2022.1 Docker Container from [odelayIO/vivado2022.1_docker](https://github.com/odelayIO/vivado2022.1_docker) repository.  Once the Docker container is created, just execute the run file.  See repository for instructions how to modify the [run.sh](https://github.com/odelayIO/vivado2022.1_docker/blob/master/run.sh) script
 
